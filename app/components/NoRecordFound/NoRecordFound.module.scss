@@ -1,0 +1,20 @@
+@import "../../styles/abstract/variable";
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.9375em;
+}
+
+.text {
+  color: var(--color-blackcol);
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}

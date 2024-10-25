@@ -1,0 +1,256 @@
+.agGridThemeWrapper {
+  width: 100%;
+  height: 39em;
+  margin-bottom: 6em;
+
+  &.dynamicHeight {
+    height: calc(100vh - 21.75em);
+
+    @media #{$ipad} {
+      margin-top: 2.375em;
+      margin-bottom: 4.375em;
+      height: 39em;
+    }
+
+    @media #{$ipadpro} {
+      height: calc(100vh - 35em);
+    }
+  }
+
+  @media #{$mob} {
+    .ag-paging-panel {
+      flex-direction: column-reverse;
+      align-items: center;
+      height: 7em;
+      justify-content: center;
+      font-size: 1.1em;
+
+      .ag-picker-field-wrapper {
+        min-height: 1.25em;
+      }
+    }
+  }
+}
+
+.agGridTheme {
+  --ag-row-border-color: var(--color-bgcol1) !important;
+  --ag-cell-horizontal-border: 1px solid var(--color-bgcol1) !important;
+  font-family: inherit !important;
+
+  .ag-header {
+    background-color: var(--color-bgcol2) !important;
+  }
+
+  .ag-root-wrapper {
+    border-color: none !important;
+    border-radius: 0.75em !important;
+  }
+
+  .ag-root {
+    font-size: 0.97em;
+    font-family: inherit !important;
+
+    @media #{$mob} {
+      font-size: 0.8em;
+    }
+  }
+
+  .ag-row {
+    border-bottom-color: var(--color-bgcol1);
+    line-height: inherit !important;
+
+    .ag-cell {
+      line-height: inherit !important;
+      display: flex !important;
+      padding-top: 1em !important;
+      padding-bottom: 1em !important;
+      // justify-content: flex-start !important;
+      align-items: center !important;
+      line-height: normal !important;
+
+      &.ag-cell-focus {
+        border: 1px solid var(--color-bgcol1) !important;
+        border-top-color: transparent !important;
+        border-left-color: transparent !important;
+        border-bottom-color: transparent !important;
+      }
+    }
+
+    :has(.table_actions_dropdown) {
+      overflow: visible !important;
+    }
+  }
+
+  .ag-header-cell-label {
+    justify-content: left !important;
+  }
+
+  .ag-row-odd {
+    background-color: rgba($color: var(--rgb-bgcol1), $alpha: 0.12);
+  }
+
+  &.noRowsBg {
+    --ag-borders: none !important;
+    --ag-cell-horizontal-border: none !important;
+
+    .ag-header {
+      background-color: rgba(
+        $color: var(--rgb-secondarycol),
+        $alpha: 0.1
+      ) !important;
+    }
+
+    .ag-row {
+      border-bottom-color: var(--color-bgcol1);
+    }
+
+    .ag-row-odd {
+      background-color: var(--color-whitecol) !important;
+    }
+  }
+
+  .ag-row {
+    &.ag-row-hover {
+      background-color: rgba($color: var(--rgb-bgcol3), $alpha: 1) !important;
+
+      &::before {
+        background-color: rgba(
+          $color: var(--rgb-bgcol3),
+          $alpha: 0.1
+        ) !important;
+      }
+    }
+
+    &.ag-row-focus {
+      z-index: 9;
+    }
+  }
+
+  .ag-selection-checkbox {
+    margin-right: 0 !important;
+  }
+
+  .ag-header-cell {
+    justify-content: center;
+
+    .ag-checkbox {
+      &:not(.ag-hidden) {
+        margin-right: 0 !important;
+
+        + div {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .ag-filter-menu {
+    z-index: 10;
+    border: none;
+    border-radius: 12px;
+
+    .ag-filter-body-wrapper {
+      background-color: var(--color-whitecol);
+      border-radius: 0.75em;
+      border: 1px solid var(--color-bgcol1);
+    }
+
+    .ag-picker-field-wrapper,
+    .ag-text-field-input {
+      border-radius: 0.375em !important;
+      border: 1px solid var(--color-bgcol1) !important;
+
+      &:focus,
+      &:focus {
+        border: 1px solid var(--color-primarycol) !important;
+        background: rgba(var(--rgb-primarycol), 0.1) !important;
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  .ag-paging-panel {
+    font-family: inherit !important;
+  }
+
+  @media #{$ipad} {
+    margin-bottom: 0;
+  }
+}
+
+.ag-popup {
+  z-index: 10 !important;
+}
+
+.ag-filter-active {
+  background: rgba(var(--rgb-primarycol), 0.1) !important;
+  box-shadow: 0 0 0 4px rgba(var(--rgb-primarycol), 0.1) !important;
+}
+
+.gridHighlightBtn {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.35em 0.5em;
+  color: var(--color-blackcol);
+  background: var(--color-bgcol1);
+  border-radius: 0.375em;
+  width: max-content;
+  line-height: 1;
+
+  &.Overdue,
+  &.Occupied,
+  &.Rejected {
+    background: rgba($color: #ef3249, $alpha: 0.1);
+    color: #ef3249;
+  }
+
+  &.Paid,
+  &.Active,
+  &.Available,
+  &.Approved {
+    background: rgba($color: #55bb25, $alpha: 0.1);
+    color: #55bb25;
+  }
+
+  &.Pending,
+  &.Unavailable,
+  &.Inprocess {
+    background: rgba($color: #ff8c00, $alpha: 0.1);
+    color: #ff8c00;
+  }
+}
+
+.gridActionBtn {
+  color: var(--rgb-secondarycol);
+  font-weight: 500;
+  text-decoration: underline;
+
+  &.disabled {
+    pointer-events: none;
+    color: rgba($color: var(--rgb-secondarycol), $alpha: 0.5);
+    text-decoration: none;
+  }
+}
+
+.periodComp {
+  line-height: 1.5;
+
+  span {
+    display: block;
+  }
+}
+
+.ag-theme-quartz .ag-checkbox-input-wrapper.ag-checked::after {
+  color: var(--color-darkbluecol) !important;
+}
+
+.table_actions_dropdown {
+  .lg {
+    width: 17.5em !important;
+  }
+}
+
+[class*="ag-theme-"]:not(.dashboard-table) {
+  font-size: inherit !important;
+}

@@ -1,0 +1,146 @@
+{
+  "brandlogo": "/assets/svgs/brand-logo.svg",
+  "brandlogoIcon": "/assets/svgs/brand-logo-icon.svg",
+  "brandlogoText": "/assets/svgs/brand-logo-text.svg",
+  "listItems": [
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/dashboard.svg",
+      "title": "Dashboard",
+      "link": "/dashboard",
+      "submenu": null
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/setting.svg",
+      "title": "Settings",
+      "link": null,
+      "slug": "settings",
+      "submenu": [
+        {
+          "title": "Setup",
+          "link": "/settings/setup",
+          "slug": "settings-setup"
+        },
+        {
+          "title": "Security",
+          "link": "/settings/security",
+          "slug": "security"
+        },
+        {
+          "title": "Inventory",
+          "link": "/settings/inventory",
+          "slug": "inventory"
+        },
+        {
+          "title": "Plans & Products",
+          "link": "/settings/plans-and-products",
+          "slug": "plans-and-products"
+        },
+        {
+          "title": "Finance",
+          "link": "/settings/finance",
+          "slug": "finance"
+        },
+        {
+          "title": "Approval Workflows",
+          "link": "/settings/approval-workflows",
+          "slug": "approval-workflows"
+        },
+        {
+          "title": "Policies",
+          "link": "/settings/policies",
+          "slug": "policies"
+        },
+        {
+          "title": "Support Tickets",
+          "link": "/settings/support-tickets",
+          "slug": "support-tickets"
+        },
+        {
+          "title": "Notifications",
+          "link": "/settings/notifications",
+          "slug": "notifications"
+        },
+        {
+          "title": "Community",
+          "link": "/settings/community",
+          "slug": "community"
+        },
+        {
+          "title": "Templates",
+          "link": "/settings/templates",
+          "slug": "templates"
+        },
+        {
+          "title": "General Settings",
+          "link": "/settings/general-settings",
+          "slug": "general-settings"
+        }
+      ]
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/operation.svg",
+      "title": "Operation",
+      "link": null,
+      "submenu": [
+        {
+          "title": "Operation 1",
+          "link": "javascript:void(0)"
+        }
+      ]
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/bills.svg",
+      "title": "Bills & payments",
+      "slug": "billings-and-payments",
+      "link": null,
+      "submenu": [
+        {
+          "title": "Payments",
+          "link": "/billings-and-payments/payments",
+          "slug": "payments"
+        }
+      ]
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/event.svg",
+      "title": "Events",
+      "link": "javascript:void(0)",
+      "submenu": null
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/calendar.svg",
+      "title": "Calendar",
+      "link": "javascript:void(0)",
+      "submenu": null
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/community.svg",
+      "title": "Community",
+      "link": null,
+      "submenu": [
+        {
+          "title": "Community 1",
+          "link": "javascript:void(0)"
+        }
+      ]
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/support.svg",
+      "title": "Supports",
+      "link": "javascript:void(0)",
+      "submenu": null
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/report.svg",
+      "title": "Reports",
+      "link": "javascript:void(0)",
+      "submenu": null
+    },
+    {
+      "icon": "/assets/svgs/sidebarIcons/admin/general.svg",
+      "title": "General Rules",
+      "link": "javascript:void(0)",
+      "submenu": null
+    }
+  ]
+}

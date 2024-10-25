@@ -1,0 +1,48 @@
+@import "../../../styles/abstract/_variable.scss";
+
+.wrapper {
+  width: 100%;
+  background-color: var(--color-bgcol3);
+  padding: 1.4375em 1.1875em;
+  clip-path: $clip-path-sm;
+  margin-bottom: 1.875em;
+  position: relative;
+}
+
+.children {
+  padding: 1.25em;
+  background-color: var(--color-whitecol);
+  border-radius: 0.9375em;
+
+  &.noBg {
+    background-color: transparent;
+    padding-top: 0 !important;
+  }
+
+  &.hidePX {
+    padding: 1.25em 0 0;
+  }
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.125em;
+  border-top: 1px solid rgba($color: var(--rgb-secondarycol), $alpha: 0.2);
+
+  &.top__link {
+    border-top: 0;
+    padding-top: 0;
+    position: absolute;
+    right: 1.25em;
+    top: 1.4375em;
+  }
+}
+
+.title {
+  margin-bottom: 0.875em;
+
+  &.lg {
+    margin-bottom: 1.2em;
+  }
+}

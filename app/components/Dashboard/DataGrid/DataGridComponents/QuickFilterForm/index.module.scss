@@ -1,0 +1,16 @@
+@import "../../../../../styles/abstract/_variable.scss";
+
+.formContainer {
+  display: flex;
+  gap: 1.25em;
+  flex-direction: row;
+  margin-bottom: 1.9375em;
+}
+
+.searchInput {
+  width: 31.25em;
+
+  @media #{$ipadpro} {
+    width: 100%;
+  }
+}

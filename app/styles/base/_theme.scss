@@ -1,0 +1,119 @@
+body {
+  font-weight: 400;
+  color: var(--color-blackcol);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0;
+
+  @media #{$ipad} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container-s {
+  width: 100%;
+  padding: 0 3.9%;
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 11.5%; // 222px
+
+  @media #{$ipadpro} {
+    padding: 0 5em;
+  }
+
+  @media #{$ipad} {
+    padding: 0 3em;
+  }
+
+  @media #{$mob} {
+    padding: 0 2em;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+  padding: 0 0.9375em;
+  z-index: 2;
+}
+
+.sec__wrapper {
+  flex-direction: column;
+}
+
+.section {
+  position: relative;
+  padding: 2em 0;
+
+  &.sm {
+    padding: 2em 0;
+  }
+
+  @media #{$tab} {
+    padding: 2em 0;
+  }
+
+  @media #{$desktop} {
+    padding: 4.375em 0;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 0.3125em;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba($color: var(--rgb-secondarycol), $alpha: 0.3);
+  border-radius: 0.625em;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($color: var(--rgb-secondarycol), $alpha: 0.5);
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba($color: var(--rgb-bgcol1), $alpha: 0.3);
+}
+
+// font weights
+$fonts-w: (
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+);
+
+@each $fontname, $fontvalue in $fonts-w {
+  .fw-#{$fontname} {
+    font-weight: $fontvalue;
+  }
+}

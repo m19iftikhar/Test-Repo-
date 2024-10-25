@@ -1,0 +1,104 @@
+@import "../../styles/abstract/variable";
+
+.alert {
+  position: relative;
+  font-size: 1.125em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  top: -1.875em;
+  width: 100%;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  .closeIcon {
+    flex-shrink: 0;
+  }
+
+  .alertBody {
+    border-radius: 0.625em;
+    padding: 1.125em 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .alertWrapper {
+    svg {
+      path {
+        stroke: black;
+      }
+    }
+
+    .close {
+      width: 1em;
+      height: 1em;
+      cursor: pointer;
+      position: relative;
+      top: 0.15em;
+    }
+
+    .message {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 1em;
+      margin-bottom: 0;
+
+      p {
+        font-size: 1.125em;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.success {
+  .alertWrapper {
+    color: #e6faf5;
+
+    .alertBody {
+      background-color: #0c9;
+    }
+
+    svg {
+      path {
+        stroke: #e6faf5 !important;
+      }
+    }
+  }
+}
+
+.failed {
+  .alertWrapper {
+    color: #fdeeee;
+
+    .alertBody {
+      background-color: #ef3249;
+    }
+
+    svg {
+      path {
+        stroke: #fdeeee !important;
+      }
+    }
+  }
+}
+
+.warning {
+  .alertWrapper {
+    color: #fcf2e4;
+
+    .alertBody {
+      background-color: #ff8c00;
+    }
+
+    svg {
+      path {
+        stroke: #fcf2e4 !important;
+      }
+    }
+  }
+}

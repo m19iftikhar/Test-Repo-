@@ -1,0 +1,20 @@
+@import "../../../styles/abstract/_variable.scss";
+
+.chart {
+  height: 25em;
+
+  @media #{$mineTab} {
+    height: 16em;
+  }
+}
+
+.top__wrapper {
+  position: absolute;
+  right: 1.25em;
+  top: 0.8em;
+
+  @media #{$ipadpro} {
+    right: 2em;
+    left: auto;
+  }
+}

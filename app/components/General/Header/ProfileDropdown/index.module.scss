@@ -1,0 +1,120 @@
+@import "../../../../styles/abstract/variable";
+
+.user__info {
+  display: flex;
+  gap: 0.9375em;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.user__detail {
+  display: flex;
+  gap: 0.625em;
+
+  h4 {
+    font-weight: 500;
+  }
+
+  @media #{$ipad} {
+    h4 {
+      font-size: 1em;
+    }
+  }
+}
+
+.profile__img {
+  width: 3.125em;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media #{$ipad} {
+    width: 2.5em;
+  }
+}
+
+.dropdown__wrapper {
+  position: absolute;
+  top: 4.2em;
+  right: -0.5em;
+  background-color: var(--color-whitecol);
+  box-shadow: 0px 4px 54px 20px rgba(0, 0, 0, 0.05);
+  width: 11.875em;
+  border-radius: 12px;
+  z-index: 1;
+  border: 1px solid var(--color-bgcol1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  @media #{$ipadpro} {
+    top: 4.6em;
+  }
+
+  @media #{$ipad} {
+    top: 4.2em;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 2em;
+    top: -1em;
+    width: 1.5625em;
+    z-index: -1;
+
+    @media #{$ipadpro} {
+      top: -0.85em;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-whitecol);
+      bottom: 0;
+    }
+  }
+
+  li {
+    margin: 0;
+    border-bottom: 1px solid rgba(var(--rgb-bgcol1), 0.6);
+
+    &:last-child {
+      border: none;
+    }
+
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.875em;
+      padding: 1.25em;
+      transition: $transition;
+      h5 {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0em;
+          width: 0%;
+          height: 2px;
+          background-color: var(--color-secondarycol);
+          transition: all 0.3s ease;
+        }
+      }
+
+      &:hover {
+        // background-color: var(--color-bgcol2);
+        transition: $transition;
+      }
+    }
+  }
+}

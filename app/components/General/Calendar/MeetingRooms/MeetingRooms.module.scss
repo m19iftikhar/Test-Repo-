@@ -1,0 +1,60 @@
+.roomsContainer {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.875em;
+  padding-bottom: 0.75em;
+
+  &::-webkit-scrollbar {
+    height: 0.4em;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-bgcol2);
+    border-radius: 3.125em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-bgcol1);
+    border-radius: 3.125em;
+  }
+}
+
+.room {
+  flex-shrink: 0;
+  width: 13em;
+  border-top: 1px solid var(--color-bgcol4);
+  border-right: 1px solid var(--color-bgcol4);
+
+  .content {
+    font-size: 0.875em;
+    padding: 0.9375em 0.625em 0px 0.625em;
+    margin-bottom: 0.9375em;
+    color: var(--color-secondarycol);
+  }
+
+  .name {
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--color-blackcol);
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4375em;
+  }
+}
+
+.totalBookings {
+  display: flex;
+  column-gap: 0.3125em;
+}
+
+.indicator {
+  width: 100%;
+  height: 0.25em;
+}

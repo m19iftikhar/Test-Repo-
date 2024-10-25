@@ -1,0 +1,96 @@
+.bookings-full-calendar {
+  .fc-toolbar-chunk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .fc-toolbar-title {
+      font-family: inherit;
+      font-size: 1.25em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .fc-button-group {
+      display: flex;
+      padding: 0.625em;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625em;
+      border-radius: 0.625em;
+
+      &:has([title="day view"]) {
+        background: rgba($color: var(--rgb-primarycol), $alpha: 0.2);
+      }
+
+      .fc-button-primary {
+        outline: none;
+        box-shadow: none;
+        font-weight: 500;
+        border-radius: 0.5em;
+        text-transform: capitalize;
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        &[title="day view"],
+        &[title="week view"],
+        &[title="month view"] {
+          border: none;
+          background: transparent;
+          color: var(--color-secondarycol);
+
+          &.fc-button-active {
+            color: var(--color-blackcol);
+            background: var(--color-primarycol);
+          }
+        }
+
+        &.fc-next-button,
+        &.fc-prev-button,
+        &.fc-today-button {
+          color: var(--color-secondarycol);
+          border: none;
+          background-color: var(--color-bgcol3);
+        }
+      }
+    }
+  }
+
+  .fc-scrollgrid,
+  .fc-timegrid-slot-label {
+    border: none;
+  }
+
+  .fc-timegrid-slot-label,
+  .fc-timegrid-axis-frame {
+    font-size: 0.875em;
+    color: var(--color-secondarycol);
+    font-family: inherit;
+  }
+
+  .fc-day-today {
+    background-color: transparent !important;
+  }
+
+  .fc-event {
+    padding: 0.625em;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+
+  .custom-now-indicator {
+    border-color: var(--color-darkbluecol);
+
+    &.fc-timegrid-now-indicator-arrow {
+      width: 0.75em;
+      height: 0.75em;
+      border-width: 0;
+      left: 2.75em;
+      border-radius: 100%;
+      background-color: var(--color-darkbluecol);
+    }
+  }
+}

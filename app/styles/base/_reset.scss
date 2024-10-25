@@ -1,0 +1,94 @@
+html {
+  scroll-behavior: smooth;
+
+  @media #{$ipadpro} {
+    overflow-x: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+
+  @media (max-width: 1400px) and (min-width: 1300px) and (min-height: 900px) {
+    font-size: 11.485px;
+  }
+
+  @media #{$desktop} {
+    font-size: 16px;
+  }
+  @media #{$ipadpro} {
+    font-size: 14px;
+  }
+  @media #{$ipadL} and #{$ipadpro} {
+    font-size: 12px;
+  }
+
+  @media #{$mob} {
+    font-size: 12px !important;
+  }
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style-position: outside;
+
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+iframe {
+  border: 0;
+}
+
+button {
+  -webkit-appearance: button;
+  appearance: button;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

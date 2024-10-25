@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+  .title {
+    font-size: 1em;
+    color: var(--color-secondarycol);
+    font-weight: 500;
+  }
+}

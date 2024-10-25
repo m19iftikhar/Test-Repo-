@@ -1,0 +1,75 @@
+button {
+  -webkit-appearance: button;
+  width: auto;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  outline: 0;
+  background: 0 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: inherit;
+  padding: 0;
+  line-height: 1;
+  &:focus {
+    outline: none;
+  }
+}
+
+.uline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-primarycol);
+    transform: scaleX(1);
+    transition: transform 0.5s ease;
+  }
+
+  &:hover {
+    &::after {
+      transition: transform 0.5s ease;
+      transform: scaleX(0);
+    }
+  }
+}
+
+.w-uline {
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: var(--color-primarycol);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+
+  &:hover {
+    transition: transform 0.5s ease;
+
+    &::after {
+      transition: transform 0.5s ease;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.btn__disabled {
+  pointer-events: none;
+  background-color: var(--color-bgcol2) !important;
+  color: var(--color-secondarycol) !important;
+  transition: $transition;
+}

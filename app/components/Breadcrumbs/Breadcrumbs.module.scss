@@ -1,0 +1,47 @@
+@import "../../styles/abstract/variable";
+
+.breadcrumb,
+.homeIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  column-gap: 0.35em;
+  margin-top: 0.25em;
+}
+
+.breadcrumbItem {
+  margin-bottom: 0;
+
+  color: var(--color-secondarycol);
+  flex-shrink: 0;
+  font-size: 1.125em;
+
+  a {
+    color: var(--color-secondarycol);
+    flex-shrink: 0;
+    font-size: 1.125em;
+
+    &:hover {
+      color: var(--color-blackcol);
+      transition: $transition;
+    }
+  }
+
+  .separator {
+    color: var(--color-secondarycol);
+    flex-shrink: 0;
+    font-size: 1.125em;
+  }
+}
+
+.homeIcon {
+  svg {
+    position: relative;
+    top: -0.25em;
+  }
+}
+
+.active {
+  color: var(--color-blackcol);
+}

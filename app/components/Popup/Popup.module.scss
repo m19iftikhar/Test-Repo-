@@ -1,0 +1,86 @@
+@import "../../styles/abstract/_variable.scss";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: var(--rgb-blackcol), $alpha: 0.5);
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.75s;
+}
+
+.popup {
+  z-index: 101;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 30em;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-whitecol);
+  transition: 0.75s;
+  display: none;
+  padding: 1.75em 1.25em;
+  border-radius: 1em;
+
+  &.active {
+    display: block;
+  }
+}
+
+.active + .overlay {
+  opacity: 1;
+  transition: 0.75s;
+  pointer-events: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  row-gap: 1.25em;
+  margin-bottom: 1em;
+
+  .title {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    column-gap: 0.25em;
+    color: rgba($color: var(--rgb-blackcol), $alpha: 0.85);
+    font-weight: 600 !important;
+  }
+
+  .icon {
+    width: 1.35em;
+    height: 1.35em;
+    padding: 0.25em;
+    border-radius: 100%;
+    flex-shrink: 0;
+    background-color: rgba($color: var(--rgb-dangercol), $alpha: 0.2);
+
+    svg {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.description {
+  max-width: 24em;
+}
+
+.iconClose {
+  position: relative;
+  top: -0.65em;
+  right: -0.25em;
+}
+
+.footer {
+  margin-top: 1.75em;
+}

@@ -1,0 +1,88 @@
+@import "../../../styles/abstract/variable";
+
+.main__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5em;
+
+  @media #{$ipad} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  @media #{$mineTab} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$mob} {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card__wrapper {
+  background-color: var(--color-whitecol);
+  padding: 1.25em 0.9375em 1.25em 1.25em;
+  border-radius: 20px;
+}
+
+.card {
+  height: 27em;
+  overflow: auto;
+  padding-right: 1.25em;
+}
+
+.title__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+  margin-bottom: 1.875em;
+}
+
+.count {
+  border: 1px solid var(--color-bgcol1);
+  font-size: 1.125em;
+  color: var(--color-secondarycol);
+  padding: 0.5em 0.75em;
+  border-radius: 10px;
+}
+
+.booking__list {
+  margin-top: 1.3125em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125em;
+}
+
+.list__item {
+  border-bottom: 1px solid rgba(var(--rgb-bgcol1), 0.6);
+}
+
+.time {
+  @media #{$ipadpro} {
+    font-size: 1.25em;
+  }
+
+  @media #{$ipad} {
+    font-size: 1em;
+  }
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9375em;
+  margin-top: 0.9375em;
+}
+
+.img__wrapper {
+  width: 1.625em;
+  aspect-ratio: 1;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125em;
+}

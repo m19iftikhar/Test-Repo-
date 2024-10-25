@@ -1,0 +1,167 @@
+@import "../../../../styles/abstract/variable";
+
+.theme__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9375em;
+  padding: 0.9375em 1.875em;
+  font-size: 1.25em;
+  font-weight: 500;
+  transition: $transition;
+  color: var(--color-blackcol);
+  background: var(--color-primarycol);
+  inset: 0;
+  border-radius: 0.75em;
+
+  span,
+  img {
+    z-index: 1;
+  }
+
+  img {
+    width: 0.75em;
+    transition: $transition;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      color: var(--color-whitecol);
+      img {
+        filter: invert(1);
+        transition: $transition;
+      }
+      background-color: var(--color-blackcol);
+      clip-path: $clip-path-sm;
+    }
+  }
+
+  &.icon__reverse {
+    flex-direction: row-reverse;
+  }
+
+  @media #{$ipad} {
+    font-size: 1em;
+  }
+}
+
+/* color variants */
+.grey__btn {
+  background-color: rgba(var(--rgb-blackcol), 0.05);
+  color: var(--color-blackcol);
+}
+
+.secondary__btn {
+  background-color: var(--color-bgcol1);
+  color: var(--color-blackcol);
+}
+
+.dark__btn {
+  background-color: var(--color-bgcol1);
+  color: var(--color-blackcol);
+}
+
+.danger__btn {
+  background-color: rgba(var(--rgb-dangercol), 0.1);
+  color: rgb(var(--rgb-dangercol));
+
+  @media #{$desktop} {
+    &:hover {
+      background-color: rgba(var(--rgb-dangercol), 1);
+      color: var(--color-whitecol);
+    }
+  }
+}
+
+.outlined__black {
+  font-size: 1.25em;
+  background-color: transparent;
+  padding: 0.75em 1.875em;
+  border: 1px solid rgba(var(--rgb-blackcol), 0.25);
+  border-radius: 0.75em;
+
+  @media #{$desktop} {
+    &:hover {
+      border-color: transparent;
+      color: var(--color-blackcol);
+      background: var(--color-primarycol);
+    }
+  }
+}
+
+.refresh__btn {
+  font-size: 1.125em;
+  padding: 0.875em 1.25em;
+
+  img {
+    width: 0.95em;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      clip-path: $clip-path-xs;
+    }
+  }
+}
+
+.icon_btn {
+  padding: 0.375em;
+  background-color: transparent;
+  display: block;
+
+  &:hover {
+    clip-path: none;
+    background-color: transparent;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      background-color: var(--color-bgcol3);
+      img {
+        filter: none;
+      }
+    }
+  }
+}
+
+/* sizes */
+.sm {
+  font-size: 1em;
+}
+
+.full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* icon */
+.icon {
+  width: 1.25em;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+
+  &.add {
+    width: 0.75em;
+  }
+
+  &.lg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &.drawerClose {
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  &.popupClose {
+    width: 1.15em;
+    height: 1.15em;
+  }
+}
+
+.btn__disabled {
+  pointer-events: none;
+  color: var(--color-secondarycol);
+  background-color: var(--color-bgcol2);
+}

@@ -1,0 +1,57 @@
+$transition: all 0.25s ease-in-out;
+$transitionSlow: all 0.5s ease-in-out;
+
+$basefont: "Lufga";
+
+// Media Sizes
+$tab: "(min-width:576px)";
+$tabL: "(min-width:768px)";
+$ipadL: "(min-width:992px)";
+$ipadXL: "(min-width:1025px)";
+$desktop: "(min-width:1200px)";
+$desktopL: "(min-width:1400px)";
+
+$ipadprolandscape: "(max-width: 1400px) and (min-width: 1300px) and (min-height: 900px)"; // Ipad Pro Only
+
+$desktopLS: "(max-width:1399.98px)";
+$ipadpro: "(max-width:1199.98px)";
+$ipad: "(max-width:991.98px)";
+$mineTab: "(max-width:767px)";
+$mob: "(max-width:575.98px)";
+
+// clip paths
+// 9px
+$clip-path-xs: polygon(
+  0.5625em 0%,
+  calc(100% - 0.5625em) 0%,
+  100% 0.5625em,
+  100% calc(100% - 0.5625em),
+  calc(100% - 0.5625em) 100%,
+  0.5625em 100%,
+  0% calc(100% - 0.5625em),
+  0% 0.5625em
+);
+
+// 12px
+$clip-path-sm: polygon(
+  0.75em 0%,
+  calc(100% - 0.75em) 0%,
+  100% 0.75em,
+  100% calc(100% - 0.75em),
+  calc(100% - 0.75em) 100%,
+  0.75em 100%,
+  0% calc(100% - 0.75em),
+  0% 0.75em
+);
+
+// 20px
+$clip-path: polygon(
+  1.25em 0%,
+  calc(100% - 1.25em) 0%,
+  100% 1.25em,
+  100% calc(100% - 1.25em),
+  calc(100% - 1.25em) 100%,
+  1.25em 100%,
+  0% calc(100% - 1.25em),
+  0% 1.25em
+);

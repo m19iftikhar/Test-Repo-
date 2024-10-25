@@ -1,0 +1,80 @@
+@import "../../../styles/abstract/variable";
+
+.twoColTemplate {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0 2em;
+  @media #{$ipadL} {
+    padding: 0 3em;
+  }
+  @media #{$desktop} {
+    padding: 0;
+  }
+  @media #{$mob} {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.left__col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left__colWrapper {
+  width: 100%;
+  max-width: 42.6875em;
+  padding-top: 5em;
+  padding-bottom: 2em;
+  @media #{$ipad} {
+    padding-top: 9em;
+  }
+  @media #{$mob} {
+    padding-top: 8em;
+    padding-bottom: 5em;
+  }
+}
+
+.left__col,
+.right__col {
+  height: 100%;
+}
+
+.right__col {
+  position: relative;
+  @media #{$ipadpro} {
+    display: none;
+  }
+}
+
+.logoWrapper {
+  margin: 0 auto 3em auto;
+  width: 11.75em;
+  height: 3.4375em;
+  overflow: hidden;
+  @media #{$ipad} {
+    width: 9em;
+  }
+
+  img,
+  svg {
+    width: 100%;
+  }
+}
+
+.formTitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3.75em;
+  .desc {
+    @media #{$desktop} {
+      width: 100%;
+      max-width: 85%;
+      margin: 0 auto;
+    }
+  }
+}

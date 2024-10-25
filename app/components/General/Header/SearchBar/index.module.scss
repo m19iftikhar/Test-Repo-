@@ -1,0 +1,82 @@
+@import "../../../../styles/abstract/variable";
+
+.search__wrraper {
+  position: relative;
+}
+
+.input__wrapper {
+  position: relative;
+  width: 17.1875em;
+  height: 100%;
+  transition: $transition;
+  z-index: 1;
+  @media #{$ipad} {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 6em;
+    right: 0;
+
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @media #{$mineTab} {
+    top: 4em;
+    right: unset;
+  }
+}
+
+.search {
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-bgcol1);
+  padding: 0.875em 0.9375em;
+  border-radius: 0.75em;
+  font-family: inherit;
+  font-size: 1em;
+
+  transition: 0.3s all ease;
+
+  &::placeholder {
+    font-size: 1.125em;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: rgba(var(--rgb-secondarycol, 0.5));
+  }
+}
+
+.search__icon {
+  position: absolute;
+  width: 1.375em;
+  right: 0.9375em;
+  top: 50%;
+  transform: translateY(-50%);
+  img {
+    width: 100%;
+  }
+}
+
+.search__icon__btn {
+  width: 3.125em;
+  aspect-ratio: 1;
+  border: 1px solid rgba(#617f90, 0.3);
+  border-radius: 10px;
+  height: 100%;
+  display: none;
+
+  img {
+    width: 1.375em;
+    height: 1.375em;
+  }
+
+  @media #{$ipad} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

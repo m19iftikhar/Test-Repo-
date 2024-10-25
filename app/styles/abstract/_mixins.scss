@@ -1,0 +1,29 @@
+@mixin transition($property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)) {
+  transition: $property $duration $ease;
+}
+
+@mixin rgbaBackgroundColor($color, $opacity) {
+  background-color: rgba($color, $opacity) !important;
+}
+
+@mixin rgbaColor($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+
+@mixin rgbaBorderColor($color, $opacity) {
+  border-color: rgba($color, $opacity) !important;
+}
+
+@mixin rgbaFill($color, $opacity) {
+  fill: rgba($color, $opacity);
+}
+
+@mixin clamp {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}

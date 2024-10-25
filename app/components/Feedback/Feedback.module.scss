@@ -1,0 +1,53 @@
+@import "../../styles/abstract/_variable.scss";
+
+.content {
+  max-width: 55em;
+  text-align: center;
+
+  @media #{$mineTab} {
+    padding-inline: 1.25em;
+  }
+
+  img {
+    margin: auto;
+    width: 16.25em;
+    height: 9.75em;
+    object-fit: cover;
+    margin-bottom: 1.875em;
+  }
+
+  h4 {
+    margin-block: 1.875em;
+  }
+
+  a {
+    max-width: 22.5em;
+    width: 100%;
+    display: inline-block;
+  }
+
+  &.drawerFeedback {
+    max-width: 100%;
+    height: 62%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    column-gap: 0;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-bottom: 0;
+    }
+
+    h1 {
+      // font-size: 2.625em;
+      margin-bottom: 0.25em;
+      margin-top: 0.5em;
+    }
+
+    h4 {
+      margin-block: 0;
+    }
+  }
+}

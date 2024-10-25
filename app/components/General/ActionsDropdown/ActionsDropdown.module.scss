@@ -1,0 +1,90 @@
+@import "../../../styles/abstract/_variable.scss";
+
+.actionsDropdown {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dotsBtn {
+    width: 3.125em;
+    height: 3.125em;
+    background-color: rgba($color: var(--rgb-primarycol), $alpha: 0);
+    border-radius: 0.625em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+
+    img {
+      width: 60%;
+    }
+
+    &:hover {
+      background-color: rgba($color: var(--rgb-primarycol), $alpha: 0.5);
+      transition: $transition;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 0;
+    right: calc(50% + 1.75em);
+    width: 15.625em;
+    flex-shrink: 0;
+    border-radius: 0.75em;
+    overflow: hidden;
+    border: 1px solid var(--color-bgcol1);
+    background: var(--color-whitecol);
+    box-shadow: 0px 4px 54px 20px rgba(0, 0, 0, 0.05);
+    list-style-type: none;
+
+    @media #{$mob} {
+      right: calc(50% + 2.3em);
+    }
+
+    li {
+      margin-bottom: 0;
+
+      .item {
+        width: 100%;
+        cursor: pointer;
+        padding: 1.375em 1.25em;
+        color: var(--color-blackcol);
+        font-size: 1em;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        .icon {
+          width: 1.5em;
+          height: 1.5em;
+          flex-shrink: 0;
+          transition: $transition;
+        }
+
+        &:hover {
+          background-color: rgba($color: var(--rgb-bgcol1), $alpha: 0.25);
+          transition: $transition;
+        }
+
+        &.isDisabled {
+          pointer-events: none;
+          background-color: var(--color-bgcol2);
+        }
+      }
+
+      &:not(:last-child) {
+        .item {
+          border-bottom: 1px solid rgba($color: #bfcacc, $alpha: 0.6);
+        }
+      }
+    }
+  }
+}

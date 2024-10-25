@@ -1,0 +1,161 @@
+@import "../../../../styles/abstract/variable";
+
+.notification__btn {
+  flex-shrink: 0;
+  background-color: rgba(#bfcacc, 0.3);
+  width: 3.4375em;
+  height: 3.3125em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-bgcol2);
+  }
+  img {
+    width: 45%;
+  }
+
+  .count {
+    position: absolute;
+    top: -0.2em;
+    right: -0.2em;
+    background-color: #ef3249;
+    width: 1.125em;
+    height: 1.125em;
+    border-radius: 50px;
+    font-size: 0.875em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-whitecol);
+  }
+}
+
+.main__wrapper {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: rgba(var(--rgb-blackcol), 0.1);
+}
+
+.content {
+  background-color: var(--color-whitecol);
+  width: 100%;
+  max-width: 47.5em;
+  position: absolute;
+  right: 14em;
+  top: 6em;
+  border-radius: 15px;
+
+  @media #{$ipadpro} {
+    right: 14em;
+    top: 7em;
+  }
+
+  @media #{$ipad} {
+    right: 11em;
+    top: 6em;
+    max-width: 35em;
+  }
+
+  @media #{$mineTab} {
+    inset: 0;
+    border-radius: 0;
+    max-width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75em;
+  height: 4.75em;
+  padding: 1.5em 1.875em 1.5em 1.875em;
+  border-bottom: 1px solid rgba(var(--rgb-bgcol1), 0.6);
+  margin-bottom: 1.5625em;
+  .closeBtn {
+    width: 1.5em;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.date {
+  padding-left: 1.875em;
+}
+
+.markAsRead__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 0.375em;
+}
+
+.notification__card {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  padding: 1.25em 1.875em;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-bgcol1);
+
+  &.unRead {
+    background-color: rgba(var(--rgb-primarycol), 0.12);
+    border-color: var(--color-primarycol);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+.cards__columns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875em;
+  height: 42.25em;
+  overflow: auto;
+
+  @media #{$desktop} {
+    p {
+      padding-right: 4.5em;
+    }
+  }
+
+  &.item {
+    :last-child {
+      border: none;
+    }
+  }
+
+  @media #{$mineTab} {
+    height: 100vh;
+    padding-bottom: 7em;
+  }
+}
+
+.icon {
+  background-color: var(--color-blackcol);
+  width: 3.125em;
+  height: 3.125em;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  flex-shrink: 0;
+
+  img {
+    width: 1.5em;
+    aspect-ratio: 1;
+  }
+}

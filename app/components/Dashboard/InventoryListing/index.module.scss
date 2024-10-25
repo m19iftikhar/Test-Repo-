@@ -1,0 +1,61 @@
+@import "../../../styles/abstract/_variable.scss";
+
+.main__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875em;
+  margin-top: 2.75em;
+
+  @media #{$ipad} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$mob} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card {
+  background-color: rgba(var(--rgb-secondarycol), 0.1);
+  padding: 2.5em 1.875em;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .icon {
+    margin-bottom: 1.875em;
+  }
+
+  .title {
+    margin-bottom: 1.2em;
+    color: var(--color-blackcol);
+  }
+
+  svg {
+    width: 3.125em;
+    aspect-ratio: 1;
+  }
+
+  * {
+    transition: all 0.3s ease;
+  }
+
+  @media #{$desktop} {
+    &:hover {
+      background-color: var(--color-blackcol);
+      clip-path: $clip-path;
+
+      * {
+        color: var(--color-whitecol);
+      }
+
+      svg {
+        path {
+          fill: var(--color-primarycol);
+        }
+      }
+    }
+  }
+}

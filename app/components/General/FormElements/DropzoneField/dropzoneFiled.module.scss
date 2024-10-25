@@ -1,0 +1,81 @@
+@import "../../../../styles/abstract/variable";
+
+.inputFileContainer {
+  position: relative;
+}
+.inputFileWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25em;
+  padding: 2.25em;
+  border-radius: 0.75em;
+  border: 1px dashed rgba($color: var(--rgb-bgcol1), $alpha: 1);
+}
+
+.required {
+  color: var(--color-dangercol);
+}
+
+.bottomLabel {
+  margin-top: 0.625em;
+  color: var(--color-secondarycol);
+}
+
+.uploadedFiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625em;
+}
+
+.fileItem {
+  position: relative;
+  width: 7.8125em;
+  height: 7.8125em;
+  border-radius: 0.625em;
+  border: 1px solid rgba($color: var(--rgb-bgcol1), $alpha: 1);
+  overflow: hidden;
+  .removeItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: var(--rgb-blackcol), $alpha: 0.25);
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: $transition;
+    img {
+      width: 1.375em;
+    }
+  }
+
+  @media #{$ipad} {
+    .removeItem {
+      opacity: 1;
+      transition: $transition;
+    }
+  }
+
+  @media #{$ipadXL} {
+    &:hover {
+      .removeItem {
+        opacity: 1;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+.previewImg {
+  img {
+    object-fit: cover;
+  }
+}
