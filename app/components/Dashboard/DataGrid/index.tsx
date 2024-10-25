@@ -30,7 +30,7 @@ import {
   RowSelectionOptions,
   createGrid,
 } from "ag-grid-community";
-import "ag-grid-charts-enterprise";
+// import "ag-grid-charts-enterprise";
 import { AG_GRID_PAGE_SIZE } from "@/app/Utility/constants";
 import Spinner from "../../Spinner";
 import NoRecordFound from "../../NoRecordFound";
